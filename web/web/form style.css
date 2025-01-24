@@ -1,0 +1,173 @@
+<style>
+            body {
+                /**background-color: white;**/
+                background-color: white;
+                opacity: 0.6;
+                background-size: calc(100%);
+                background-position: calc(100%);
+            }
+            .container {
+                display: block;
+                background-image: url(bg\ rs.jpg);
+                background-size: cover;
+                background-position: center;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .ul-navbar {
+                color: black;
+                display: flex;
+                justify-content: right;
+                align-items: left;
+                border-radius: 20px;
+                list-style-type: none;
+            }
+
+            .a-navbar {
+                text-decoration: none;
+            }
+
+            .li-navbar:hover {
+                background-color: rgb(227, 223, 181);
+                transition: .4s ease-in-out;
+                transition-delay: .1s;
+            }
+           
+            .li-navbar {
+                border: 1px solid rgb(255, 255, 255);
+                list-style-type: none;
+                padding: 10px;
+                margin: 5px;
+             }
+
+            .tag-atas {
+                background-position: calc(40%);
+                background-size: calc(120%);
+                width: 40%;
+                height: 170px;
+                background-color: rgb(255, 255, 255);
+                opacity: 0.6;
+                border-radius: 30px;
+                margin-bottom: 50px;
+                margin-left: auto;
+                margin-right: auto;
+                border: 2px solid rgb(203, 100, 36);
+            }
+
+            .tag-atas h1 {
+                text-transform: uppercase;
+                text-align: center;
+                padding-top: 30px;
+                font-size: 30px;
+                letter-spacing: 1px;
+                color: rgb(0, 0, 0) transparent;
+                font-family: sans-serif;
+            }
+
+            .tag-atas h3 {
+                text-transform: uppercase;
+                text-align: center;
+                padding-top: 5px;
+                font-size: 18px;
+                letter-spacing: 1px;
+                color: white;
+                font-family: sans-serif;
+            }
+
+            .pendaftaran {
+                width: 560px;
+                height: 1400px;
+                margin: auto;
+                background-color: transparent;
+                border-radius: 20px;
+                border: 2px solid rgb(203, 100, 36);
+            }
+
+            p {
+                text-align: left;
+                padding: 10px 10px;
+                font-size: 26px;
+                color: black;
+                letter-spacing: 0.8px;
+                font-family: sans-serif;
+            }
+
+            form {
+                width: 520px;
+                text-align: center;
+                margin-left: 20px;
+            }
+
+            form label {
+                display: flex;
+                margin-top: 20px;
+                margin-bottom: 6px;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 0.3px;
+                color: rgb(0, 0, 0);
+                font-family: sans-serif;
+                padding: 20px 10px;
+            }
+
+            form .input {
+                width: 100%;
+                padding: 14px;
+                border: none;
+                border: 1px solid black;
+                border-radius: 40px;
+                outline: none;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+
+            button {
+                background-color: black;
+                color: #fff;
+                width: 100%;
+                height: 45px;
+                font-size: 16px;
+                padding: 12px;
+                border-radius: 40px;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin-top: 30px;
+                border: none;
+                outline: none;
+                box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            }
+
+            form div {
+                text-align: right;
+                margin-right: 10px;
+                margin-top: 4px;
+                color: red;
+                font-size: 11px;
+                letter-spacing: 0.5px;
+            }
+
+            #popup {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                cursor: pointer;
+            }
+
+            #popup-content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            
+        </style>

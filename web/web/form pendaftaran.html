@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        TUGAS WEB DESIGN form Pendaftaran
+        Kategori Web Kesehatan
+
+        Anggota Kelompok: blasius martinus layo herin
+                          andre ilyas 
+                          peris trisna wati nazara
+                          daffa ismail nurfalah
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tugas Web Desain Membuat Form Pendaftaran">
+        <meta name="author" content="Cassiel D. Ferdinand">
+        <title>PENDAFTARAN BPJS</title>
+        <link href="form style.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <!--BADAN-->
+    <body>
+        <script scr="script.js"></script>
+        <div class="container">
+            <div class="tag-atas">
+                <h1>Form Pendaftaran</h1>
+            </div>
+            <div class="pendaftaran">
+                <br>
+                <form onsubmit="return check();">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="" class="input">
+                    <div id="id_nama"></div>
+
+                    <label>No. Identitas</label>
+                    <input type="number" id="identitas" class="input">
+                    <div id="id_identitas"></div>
+
+                    <label>No. Telphone</label>
+                    <input type="number" id="notelp" class="input">
+                    <div id="id_notelp"></div>
+
+                    <label>Usia</label>
+                    <input type="number" id="usia" class="input">
+                    <div id="id_usia"></div>
+
+                    <label>Jenis Kelamin</label>
+                    <select name="" id="kelamin" class="input">
+                        <option value="-"> </option>
+                        <option value="Laki-Laki">Laki-Laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                    <div id="id_kelamin"></div>
+
+                    <label>Tempat Lahir</label>
+                    <input type="text" id="tmptlahir" class="input">
+                    <div id="id_tmptlahir"></div>
+
+                    <label>Tanggal Lahir</label>
+                    <input type="date" id="tgllahir" class="input">
+                    <div id="id_tgllahir"></div> 
+
+                    <label>Agama</label>
+                    <select name="" id="agama" class="input">
+                        <option value="-"> </option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Khonghucu">Khonghucu</option>
+                    </select>
+                    <div id="id_agama"></div>
+
+                    <label>Alamat Rumah</label>
+                    <input type="text" id="alamat" class="input">
+                    <div id="id_alamat"></div>
+
+                    <button onclick="showPopup()">Daftar</button>
+                    <div id="output" hidden></div>
+                </form>
+                
+                    <!-- Popup -->
+                    <div id="popup">
+                        <div id="popup-content">
+                            <p id="OutputData"></p>
+                            <button onclick="closePopup()">Tutup</button> 
+                            </body>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
