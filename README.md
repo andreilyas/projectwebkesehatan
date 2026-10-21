@@ -42,6 +42,9 @@ Website edukasi tentang demam berdarah dengue (DBD), meliputi gejala, penyebab, 
 └── README.md
 ```
 
+Semua halaman dan folder aset berada di root project. Tidak ada folder aplikasi
+duplikat yang perlu dibuka atau dideploy.
+
 ## Menjalankan Secara Lokal
 
 Website ini tidak membutuhkan proses build. Buka `index.html` langsung di browser atau jalankan static server:

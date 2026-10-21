@@ -92,9 +92,12 @@ form button:hover {
 #popup {
     position: fixed;
     inset: 0;
-    display: none;
     padding: 1rem;
     background: rgba(15, 23, 42, .7);
+}
+
+#popup[hidden] {
+    display: none;
 }
 
 #popup-content {
@@ -110,9 +113,12 @@ form button:hover {
     transform: translate(-50%, -50%);
 }
 
-#OutputData {
-    margin: 0;
+#outputData {
     line-height: 1.8;
+}
+
+#popupTitle {
+    margin-top: 0;
 }
 
 #popup-content button {

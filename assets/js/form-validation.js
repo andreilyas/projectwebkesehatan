@@ -1,4 +1,4 @@
-const formFields = [
+const FORM_FIELDS = [
     ["nama", "id_nama", "Nama Lengkap"],
     ["identitas", "id_identitas", "No. Identitas"],
     ["notelp", "id_notelp", "No. Telepon"],
@@ -15,7 +15,7 @@ function getFieldValue(fieldId) {
 }
 
 function clearValidationMessages() {
-    formFields.forEach(([, errorId]) => {
+    FORM_FIELDS.forEach(([, errorId]) => {
         document.getElementById(errorId).textContent = "";
     });
 }
@@ -25,11 +25,10 @@ function showValidationError(fieldId, errorId) {
     document.getElementById(fieldId).focus();
 }
 
-function renderSummary() {
-    const output = document.getElementById("output");
+function renderSummary(output) {
     output.replaceChildren();
 
-    formFields.forEach(([fieldId, , label]) => {
+    FORM_FIELDS.forEach(([fieldId, , label]) => {
         const row = document.createElement("div");
         const labelElement = document.createElement("strong");
         labelElement.textContent = `${label}: `;
@@ -43,30 +42,43 @@ function renderSummary() {
     });
 }
 
-function check() {
+function validateForm() {
     clearValidationMessages();
 
-    for (const [fieldId, errorId] of formFields) {
+    for (const [fieldId, errorId] of FORM_FIELDS) {
         if (!getFieldValue(fieldId)) {
             showValidationError(fieldId, errorId);
             return false;
         }
     }
 
-    renderSummary();
-    showPopup();
-    return false;
+    return true;
 }
 
-function showPopup() {
-    const popup = document.getElementById("popup");
-    const output = document.getElementById("output");
-    const outputData = document.getElementById("OutputData");
-
-    outputData.replaceChildren(...output.cloneNode(true).childNodes);
-    popup.style.display = "block";
+function showPopup(popup, outputData, summary) {
+    outputData.replaceChildren(...summary.cloneNode(true).childNodes);
+    popup.hidden = false;
 }
 
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
+function closePopup(popup) {
+    popup.hidden = true;
 }
+
+const form = document.getElementById("registrationForm");
+const output = document.getElementById("output");
+const popup = document.getElementById("popup");
+const outputData = document.getElementById("outputData");
+const closeButton = document.getElementById("closePopup");
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!validateForm()) {
+        return;
+    }
+
+    renderSummary(output);
+    showPopup(popup, outputData, output);
+});
+
+closeButton.addEventListener("click", () => closePopup(popup));

@@ -15,8 +15,7 @@
                 <h1>Form Pendaftaran</h1>
             </div>
             <div class="pendaftaran">
-                <br>
-                <form onsubmit="return check();">
+                <form id="registrationForm" novalidate>
                     <label for="nama">Nama Lengkap</label>
                     <input type="text" id="nama" class="input" autocomplete="name" required>
                     <div id="id_nama"></div>
@@ -69,10 +68,11 @@
                     <div id="output" hidden></div>
                 </form>
                 
-                    <div id="popup">
+                    <div id="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" hidden>
                         <div id="popup-content">
-                            <div id="OutputData"></div>
-                            <button type="button" onclick="closePopup()">Tutup</button>
+                            <h2 id="popupTitle">Data Pendaftaran</h2>
+                            <div id="outputData"></div>
+                            <button id="closePopup" type="button">Tutup</button>
                         </div>
                     </div>
             </div>
