@@ -1,0 +1,57 @@
+﻿:root {
+    --primary: #4a62ae;
+    --ink: #263b59;
+    --muted: #64748b;
+    --line: #e2e8f0;
+}
+
+html { scroll-behavior: smooth; }
+body { color: var(--ink); font-family: "Open Sans", Arial, sans-serif; }
+h1, h2, h3, .navbar-brand { font-family: "Comic Sans MS", "Trebuchet MS", sans-serif; }
+h2 { color: var(--ink); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.2; }
+.navbar { background: rgba(255, 255, 255, .96); box-shadow: 0 2px 12px rgba(38, 59, 89, .08); }
+.navbar-brand img { object-fit: contain; vertical-align: middle; }
+.nav-link { color: var(--ink); font-weight: 600; }
+.nav-link:hover, .nav-link.active { color: var(--primary); }
+.btn-primary { --bs-btn-bg: var(--primary); --bs-btn-border-color: var(--primary); --bs-btn-hover-bg: #364f8d; --bs-btn-hover-border-color: #364f8d; }
+.hero { background: linear-gradient(135deg, #eef3ff 0%, #fff 72%); }
+.hero h1 { color: var(--ink); max-width: 620px; }
+.hero-image { display: inline-flex; align-items: center; justify-content: center; width: min(100%, 420px); min-height: 360px; background: #dce5ff; border-radius: 50%; }
+.hero-image img { width: 78%; animation: floating 4s ease-in-out infinite; }
+.section-space { padding: 6rem 0; }
+.section-label { color: var(--primary); font-size: .78rem; font-weight: 800; letter-spacing: .12em; }
+.section-title { max-width: 650px; }
+.symptom-list .list-group-item { padding: .8rem 0; color: var(--muted); border-color: var(--line); }
+.symptom-list .list-group-item::before { content: "*"; margin-right: .75rem; color: var(--primary); font-weight: 700; }
+.symptom-image { min-height: 440px; display: flex; align-items: center; justify-content: center; }
+.symptom-image img { width: 100%; height: 440px; object-fit: cover; }
+.gallery img { height: 360px; object-fit: cover; }
+.cause-card, .prevention-card, .team-card { border: 1px solid var(--line); border-radius: 1rem; background: #fff; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
+.cause-card:hover, .prevention-card:hover, .team-card:hover { transform: translateY(-5px); box-shadow: 0 .75rem 1.5rem rgba(38, 59, 89, .12); }
+.cause-card img { height: 180px; object-fit: cover; }
+.accordion-item { border-color: var(--line); }
+.accordion-button { color: var(--ink); font-weight: 700; }
+.accordion-button:not(.collapsed) { color: var(--primary); background: #eef3ff; box-shadow: none; }
+.prevention-card { padding: 1rem; }
+.prevention-card > span { display: inline-flex; align-items: center; justify-content: center; width: 2.25rem; height: 2.25rem; color: #fff; background: var(--primary); border-radius: .6rem; font-weight: 700; }
+.prevention-card h3 { margin: 1rem 0 .4rem; font-size: 1.25rem; }
+.prevention-card p { color: var(--muted); min-height: 3.5rem; }
+.prevention-card img { display: block; width: 100%; height: 150px; object-fit: contain; border-radius: .75rem; background: #f8fafc; }
+.team-card { padding: 1.5rem 1rem; text-align: center; }
+.team-card img { width: 145px; height: 145px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; }
+.team-card h3 { font-size: 1rem; margin-bottom: .3rem; }
+.team-card small { color: var(--muted); }
+.team-card a { display: flex; align-items: center; justify-content: center; gap: .35rem; margin-top: .65rem; color: var(--primary); font-size: .9rem; font-weight: 700; text-decoration: none; }
+.team-card .instagram-icon { width: 25px; height: 25px; margin: 0; object-fit: contain; border-radius: 0; }
+.team-card a:hover { text-decoration: underline; }
+.map-section { background: #f8fafc; }
+.map-frame iframe { display: block; width: 100%; height: 350px; border: 0; }
+.footer { color: #dbe5ff; background: #263b59; }
+.footer h3 { color: #fff; font-size: 1.2rem; margin-bottom: .9rem; }
+.footer p { margin-bottom: .4rem; }
+.footer-copyright { padding-top: 1rem; text-align: center; }
+.back-to-top { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 5; display: none; width: 2.75rem; height: 2.75rem; border-radius: 50%; }
+.back-to-top.show { display: block; }
+@keyframes floating { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@media (max-width: 991.98px) { .symptom-image, .symptom-image img { min-height: 360px; height: 360px; } }
+@media (max-width: 575.98px) { .section-space { padding: 4rem 0; } .hero-image { min-height: 280px; } .gallery img { height: 230px; } .symptom-image, .symptom-image img { min-height: 280px; height: 280px; } .map-frame iframe { height: 280px; } }
